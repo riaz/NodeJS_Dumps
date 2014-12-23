@@ -1,0 +1,8 @@
+<script src="http://localhost/socket.io/socket.io.js"></script>  
+<script>  
+var server = io.connect('http://localhost:1337');  
+server.on('SAP_Event', function (data) {  
+    console.log(JSON.stringify(data));
+    alert('Hello ' + data.hello);    
+});  
+</script>  

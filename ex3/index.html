@@ -1,0 +1,12 @@
+<html>  
+<script src="http://localhost:1337/socket.io/socket.io.js"></script>  
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>  
+var server = io.connect('http://localhost:1337');  
+server.on('SAP_Event', function (data) {  
+    document.writeln(JSON.stringify(data));  
+    //alert(data);
+    //$('html').css('background-color',data.color);  
+});  
+</script>  
+</html>  

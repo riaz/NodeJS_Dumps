@@ -1,0 +1,19 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://cdn.sencha.io/ext/gpl/4.2.0/resources/css/ext-all-neptune.css"/>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	var socket = io.connect('http://localhost');
+	socket.on('news',function(data){
+		console.log(data);		
+	});
+	socket.emit('my other event',{my: 'data'});
+</script>
+</head>
+<body>
+<script src="http://cdn.sencha.io/ext/gpl/4.2.0/ext-all-debug.js"></script>
+<script src="Ext_grid_sflight.js"></script>
+</body>
+</html>
+
+
